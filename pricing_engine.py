@@ -57,9 +57,8 @@ def run_pricing_engine(retail_df, demand_df):
 
     for _, row in latest.iterrows():
         base_price = row['price']
-      # Realistic retail pricing: max ±12% change (industry standard)
-price_multipliers = np.linspace(0.88, 1.12, 9)  # 88% to 112%
-prices = np.round(base_price * price_multipliers, 2)
+      # Industry standard: max ±12% price change
+prices = np.round(base_price * np.linspace(0.88, 1.12, 9), 2)
         
         best_price = base_price
         best_revenue = row['sales'] * base_price
