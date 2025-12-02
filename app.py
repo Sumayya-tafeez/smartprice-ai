@@ -30,7 +30,7 @@ if retail_file and demand_file:
 
     if st.button("Run AI Pricing Engine", type="primary", use_container_width=True):
         with st.spinner("Training model & calculating optimal prices..."):
-            results_df, model, encoder, avg_uplift, r2 = run_pricing_engine(retail_df, demand_df)
+            results_df, avg_uplift, r2 = run_pricing_engine(retail_df, demand_df)
 
         st.success(f"Done! Model Accuracy (R²): {r2:.3f} | Average Revenue Uplift: +{avg_uplift:.1f}%")
 
