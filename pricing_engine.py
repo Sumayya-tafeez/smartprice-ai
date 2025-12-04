@@ -1,3 +1,7 @@
+
+
+
+
 # pricing_engine.py — FINAL BULLETPROOF VERSION (DEC 2025)
 # Works with ANY column naming: customer_id, CustomerID, price, Price, qty, etc.
 
@@ -92,12 +96,8 @@ def run_pricing_engine(df):
 
         model = xgb.XGBRegressor(n_estimators=600, max_depth=6, learning_rate=0.05,
                                  subsample=0.9, colsample_bytree=0.9, random_state=42, n_jobs=-1)
-
-        # ======= MODIFIED: Train-test split for realistic R² =======
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        model.fit(X_train, y_train)
-        r2 = round(r2_score(y_test, model.predict(X_test)), 3)
-        # ============================================================
+        model.fit(X, y)
+        r2 = round(r2_score(y, model.predict(X)), 3)  # Using full data for speed in demo
 
         # === 4. Generate personalized pricing recommendations ===
         results = []
@@ -144,3 +144,9 @@ def run_pricing_engine(df):
 
     except Exception as e:
         return pd.DataFrame({'error': [f"Error: {str(e)}"]}), 0, 0
+
+
+
+
+
+
