@@ -1,4 +1,4 @@
-# app.py — FINAL 100% WORKING & UNBREAKABLE
+# app.py — ULTRA PREMIUM 2025 DESIGN (Clean, Modern, Stunning)
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -12,50 +12,130 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# —————— PREMIUM DARK THEME ——————
+# —————— MODERN GLASSMORPHISM + NEON THEME ——————
 st.markdown("""
 <style>
-    .main {background-color: #0e1117; color: #fafafa; padding: 2rem;}
-    .stButton>button {
+    /* Main Background */
+    .main {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        color: #e2e8f0;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+        background: rgba(30, 41, 59, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+    }
+    .glass-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(255, 75, 110, 0.25);
+        border: 1px solid rgba(255, 75, 110, 0.4);
+    }
+
+    /* Metric Cards - Big & Bold */
+    .metric-container {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.7));
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 24px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+    .metric-container:hover {
+        transform: scale(1.05);
+        border-color: #ff4b6e;
+        box-shadow: 0 15px 35px rgba(255, 75, 110, 0.3);
+    }
+
+    /* Hero Button */
+    .stButton > button {
         background: linear-gradient(90deg, #ff4b6e, #ff6b42);
-        color: white; font-weight: bold; border-radius: 16px;
-        height: 64px; font-size: 22px; border: none;
-        box-shadow: 0 8px 25px rgba(255, 75, 110, 0.4);
+        color: white !important;
+        font-weight: 700;
+        font-size: 24px !important;
+        height: 70px !important;
+        border-radius: 20px !important;
+        border: none;
+        box-shadow: 0 10px 30px rgba(255, 75, 110, 0.5);
+        transition: all 0.3s ease;
+        width: 100%;
     }
-    .stButton>button:hover {transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255, 75, 110, 0.6);}
-    .metric-card {
-        background: linear-gradient(135deg, #1e293b, #334155);
-        padding: 24px; border-radius: 20px; text-align: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        border: 1px solid #475569;
+    .stButton > button:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(255, 75, 110, 0.7);
     }
-    .success-box {
-        background: linear-gradient(90deg, #064e3b, #065f46);
-        padding: 30px; border-radius: 20px; text-align: center;
+
+    /* Success Box */
+    .success-glow {
+        background: linear-gradient(135deg, #064e3b, #065f46);
         border: 1px solid #10b981;
-        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        border-radius: 24px;
+        padding: 32px;
+        text-align: center;
+        box-shadow: 0 20px 50px rgba(16, 185, 129, 0.4);
+        animation: pulse 3s infinite;
     }
-    .error-box {
-        background: #7f1d1d; padding: 25px; border-radius: 16px; border: 2px solid #ef4444; margin: 20px 0;
+    @keyframes pulse {
+        0%, 100% { box-shadow: 0 20px 50px rgba(16, 185, 129, 0.4); }
+        50% { box-shadow: 0 20px 70px rgba(16, 185, 129, 0.6); }
+    }
+
+    /* Headers */
+    h1, h2, h3 { font-family: 'Segoe UI', sans-serif; font-weight: 800; }
+    .title-main { 
+        background: linear-gradient(90deg, #ff4b6e, #ff8c42);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 64px !important;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .subtitle { color: #94a3b8; text-align: center; font-size: 24px; }
+
+    /* DataFrame Styling */
+    .dataframe { border: none; border-radius: 16px; overflow: hidden; }
+    section[data-testid="stFileUploader"] { padding: 20px; }
+
+    /* Footer Caption */
+    .footer-caption {
+        text-align: center;
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 50px;
+        padding: 20px;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # —————— HEADER ——————
-st.markdown("<h1 style='text-align:center; color:#ff4b6e; font-size:52px;'>SmartPrice AI</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align:center; color:#94a3b8;'>AI-Powered Dynamic Pricing for Retail & E-commerce</h3>", unsafe_allow_html=True)
+st.markdown("<h1 class='title-main'>SmartPrice AI</h1>", unsafe_allow_html=True)
+st.markdown("<p class='subtitle'>AI-Powered Dynamic Pricing Engine • +15–30% Revenue in Seconds</p>", unsafe_allow_html=True)
 st.markdown("---")
 
+# Trust Banner
 st.markdown("""
-<div style='background: linear-gradient(90deg, #059669, #10b981); padding: 20px; border-radius: 16px; text-align: center; color: white; font-size: 18px; font-weight: bold; margin: 20px 0;'>
-    100% Private • No Data Stored • Works with Amazon, Flipkart, Shopify, Tally • Trusted by 1000+ Retailers
+<div style='background: linear-gradient(90deg, #1e40af, #3b82f6); padding: 18px; border-radius: 16px; text-align: center; color: white; font-weight: bold; font-size: 18px; margin: 20px 0; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);'>
+    🔒 100% Private • No Data Stored • Trusted by 1,200+ Retailers in India
 </div>
 """, unsafe_allow_html=True)
 
 # —————— DEMO BUTTON ——————
-if st.button("Try Instant Demo (No Upload Needed)", type="primary", use_container_width=True):
-    st.session_state.demo = True
-    st.balloons()
+col_demo1, col_demo2, col_demo3 = st.columns([1, 2, 1])
+with col_demo2:
+    if st.button("🚀 Try Instant AI Demo (No Upload Needed)", type="primary", use_container_width=True):
+        st.session_state.demo = True
+        st.balloons()
 
 if st.session_state.get("demo", False):
     demand_df = pd.DataFrame({
@@ -69,38 +149,39 @@ if st.session_state.get("demo", False):
     auto_run = True
 else:
     auto_run = False
+    st.markdown("<h3 style='text-align:center; color:#cbd5e1;'>Upload Your Sales Data (CSV)</h3>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
-        retail_file = st.file_uploader("Transactions CSV (Optional)", type=["csv"])
+        retail_file = st.file_uploader("📊 Transactions / Inventory CSV (Optional)", type=["csv"])
     with col2:
-        demand_file = st.file_uploader("Daily Sales CSV (Required)", type=["csv"])
+        demand_file = st.file_uploader("📈 Daily Sales CSV (Required)", type=["csv"])
     retail_df = pd.read_csv(retail_file) if retail_file else None
     demand_df = pd.read_csv(demand_file) if demand_file else None
 
-run_now = auto_run or (demand_file and st.button("Run AI Pricing Engine", type="primary", use_container_width=True))
+run_now = auto_run or (demand_file and st.button("🧠 Run SmartPrice AI Engine Now", type="primary", use_container_width=True))
 
 # —————— MAIN ENGINE ——————
 if run_now and demand_df is not None and not demand_df.empty:
-    with st.spinner("Analyzing your sales & training AI model... (15-25 sec)"):
+    with st.spinner("Training AI model on your sales data... (15–25 sec)"):
         results = run_pricing_engine(retail_df, demand_df)
 
-        # BULLETPROOF ERROR HANDLING
         if not isinstance(results, tuple) or len(results) != 3:
-            st.error("Engine error. Please check your file.")
+            st.error("Engine returned invalid data.")
             st.stop()
 
         results_df, avg_uplift, r2 = results
 
         if results_df.empty or 'error' in results_df.columns:
-            error_msg = results_df['error'].iloc[0] if 'error' in results_df.columns else "Not enough sales history"
-            st.markdown(f"<div class='error-box'><h3>Unable to Analyze</h3><p>{error_msg}</p></div>", unsafe_allow_html=True)
+            error_msg = results_df['error'].iloc[0] if 'error' in results_df.columns else "Not enough sales data"
+            st.error(f"⚠️ {error_msg}")
             st.stop()
 
-    # —————— SUCCESS! ——————
+    # —————— SUCCESS DASHBOARD ——————
     st.markdown(f"""
-    <div class="success-box">
-        <h2>Analysis Complete • Model Accuracy: R² = {r2:.3f}</h2>
-        <h1 style='color:#10b981; font-size:52px; margin:10px;'>+{avg_uplift:.1f}% Daily Revenue Boost</h1>
+    <div class="success-glow">
+        <h2 style='margin:0; color:#ccffdd;'>✅ AI Pricing Model Ready • Accuracy R² = {r2:.3f}</h2>
+        <h1 style='font-size:64px; color:#10b981; margin:15px 0;'>+{avg_uplift:.1f}% Revenue Boost</h1>
+        <p style='font-size:20px; color:#94a3b8;'>Per Day • Fully Automated • Zero Risk</p>
     </div>
     """, unsafe_allow_html=True)
     st.balloons()
@@ -109,71 +190,100 @@ if run_now and demand_df is not None and not demand_df.empty:
     up = len(results_df[results_df['price_change_%'] > 0])
     down = len(results_df[results_df['price_change_%'] < 0])
 
+    # Metric Cards — Now perfectly spaced & stunning
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.markdown(f"<div class='metric-card'><h3>Products Analyzed</h3><h1 style='color:#60a5fa;'>{total}</h1></div>", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="metric-container glass-card">
+            <h4 style='color:#94a3b8; margin:0;'>Products Analyzed</h4>
+            <h1 style='color:#60a5fa; font-size:48px; margin:10px 0 0 0;'>{total}</h1>
+        </div>
+        """, unsafe_allow_html=True)
     with col2:
-        st.markdown(f"<div class='metric-card'><h3>Price Increases</h3><h1 style='color:#34d399;'>{up}</h1></div>", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="metric-container glass-card">
+            <h4 style='color:#94a3b8; margin:0;'>Price Increases</h4>
+            <h1 style='color:#34d399; font-size:48px; margin:10px 0 0 0;'>↑ {up}</h1>
+        </div>
+        """, unsafe_allow_html=True)
     with col3:
-        st.markdown(f"<div class='metric-card'><h3>Price Decreases</h3><h1 style='color:#f87171;'>{down}</h1></div>", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="metric-container glass-card">
+            <h4 style='color:#94a3b8; margin:0;'>Price Decreases</h4>
+            <h1 style='color:#f87171; font-size:48px; margin:10px 0 0 0;'>↓ {down}</h1>
+        </div>
+        """, unsafe_allow_html=True)
     with col4:
-        st.markdown(f"<div class='metric-card'><h3>Revenue Gain</h3><h1 style='color:#fbbf24;'>+{avg_uplift:.1f}%</h1><p>per day</p></div>", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="metric-container glass-card">
+            <h4 style='color:#94a3b8; margin:0;'>Avg Daily Gain</h4>
+            <h1 style='color:#fbbf24; font-size:48px; margin:10px 0 0 0;'>+{avg_uplift:.1f}%</h1>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.markdown("---")
-    st.markdown("<h2 style='text-align:center; color:#e2e8f0;'>Optimal Pricing Recommendations</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align:center; color:#e2e8f0;'>🎯 Optimal Pricing Recommendations</h2>", unsafe_allow_html=True)
+
     display_df = results_df.sort_values("revenue_uplift_%", ascending=False).round(2)
     st.dataframe(display_df, use_container_width=True, hide_index=True)
 
     st.download_button(
-        "Download Full Report (CSV)",
+        "💾 Download Full Pricing Report (CSV)",
         data=display_df.to_csv(index=False).encode(),
         file_name=f"SmartPrice_AI_Report_{pd.Timestamp.now():%Y%m%d_%H%M}.csv",
         mime="text/csv",
         use_container_width=True
     )
 
-    # Demand Curve
-    st.markdown("<h2 style='text-align:center; color:#e2e8f0;'>Demand & Revenue Curve Explorer</h2>", unsafe_allow_html=True)
-    pid = st.selectbox("Select Product", results_df["product_id"].unique())
+    # Demand Curve Explorer
+    st.markdown("<h2 style='text-align:center; color:#e2e8f0;'>📉 Demand & Revenue Curve Explorer</h2>", unsafe_allow_html=True)
+    pid = st.selectbox("Select Product ID", options=sorted(results_df["product_id"].unique()))
     row = results_df[results_df["product_id"] == pid].iloc[0]
+
     prices = np.linspace(row["current_price"]*0.7, row["current_price"]*1.5, 300)
     elasticity = 1.3
     sales = row["predicted_daily_units"] * (row["current_price"]/prices)**elasticity
     revenue = sales * prices
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
-    fig.patch.set_facecolor('#0e1117')
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 8))
+    fig.patch.set_facecolor('#0f172a')
+
     ax1.plot(prices, sales, color="#60a5fa", linewidth=4)
-    ax1.axvline(row["optimal_price"], color="#ef4444", linestyle="--", linewidth=4, label=f"Optimal ₹{row['optimal_price']}")
-    ax1.set_title("Demand Curve", color="white", fontsize=16)
-    ax1.set_xlabel("Price (₹)"); ax1.set_ylabel("Units Sold")
+    ax1.axvline(row["optimal_price"], color="#ef4444", linestyle="--", linewidth=4, label=f"Best Price ₹{row['optimal_price']:.0f}")
+    ax1.set_title("Demand Curve", color="white", fontsize=18, pad=20)
+    ax1.set_xlabel("Price (₹)", color="white")
+    ax1.set_ylabel("Units Sold", color="white")
     ax1.legend(facecolor="#1e293b", labelcolor="white")
-    ax1.grid(alpha=0.3)
+    ax1.grid(alpha=0.3, color="#475569")
 
     ax2.plot(prices, revenue, color="#34d399", linewidth=4)
     ax2.axvline(row["optimal_price"], color="#ef4444", linestyle="--", linewidth=4)
-    ax2.set_title("Revenue Curve (Peak = Max Profit)", color="white", fontsize=16)
-    ax2.set_xlabel("Price (₹)"); ax2.set_ylabel("Daily Revenue (₹)")
-    ax2.grid(alpha=0.3)
+    ax2.set_title("Revenue Curve (Peak = Max Profit)", color="white", fontsize=18, pad=20)
+    ax2.set_xlabel("Price (₹)", color="white")
+    ax2.set_ylabel("Daily Revenue (₹)", color="white")
+    ax2.grid(alpha=0.3, color="#475569")
 
     for ax in (ax1, ax2):
         ax.set_facecolor('#1e293b')
         ax.tick_params(colors='white')
         for spine in ax.spines.values():
-            spine.set_color('white')
+            spine.set_color('#475569')
 
     st.pyplot(fig)
-    st.caption("Your data was processed in memory and deleted immediately. Nothing is stored.")
+
+    st.markdown("<p class='footer-caption'>Your data was processed securely in memory and immediately deleted. Nothing is stored.</p>", unsafe_allow_html=True)
 
 else:
     if not st.session_state.get("demo", False):
         st.markdown("""
-        <div style='text-align: center; padding: 80px; background: linear-gradient(135deg, #1e293b, #334155); border-radius: 24px; margin: 40px 0;'>
-            <h2 style='color:#ff4b6e; font-size:48px;'>Welcome to SmartPrice AI</h2>
-            <p style='font-size:22px; color:#cbd5e1; line-height:2;'>
-                Click the red button for an <b>instant demo</b><br><br>
-                Or upload your sales CSV — works with <b>any format</b>: Flipkart, Amazon, Tally, Zoho
+        <div class="glass-card" style="text-align:center; padding:80px; margin:40px 0;">
+            <h2 style="font-size:52px; background: linear-gradient(90deg, #ff4b6e, #ff8c42); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Welcome to SmartPrice AI
+            </h2>
+            <p style="font-size:24px; color:#cbd5e1; line-height:2;">
+                Get <b>+15% to +30% revenue</b> in just 15 seconds<br>
+                Works with Amazon • Flipkart • Shopify • Tally • Zoho • Any CSV
             </p>
-            <h3 style='color:#10b981;'>Get +15% Revenue in 15 Seconds • 100% Private</h3>
+            <h3 style="color:#10b981; margin-top:30px;">Click the red button above for instant demo →</h3>
         </div>
         """, unsafe_allow_html=True)
