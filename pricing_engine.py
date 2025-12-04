@@ -52,7 +52,7 @@ def run_pricing_engine(df):
         # Clean data
         df['date'] = pd.to_datetime(df['date'], errors='coerce')
         df = df.dropna(subset=required)
-        if len(df) < 30:
+        if len(df) < 15:
             return pd.DataFrame({'error': ['Need at least 30 transactions']}), 0, 0
 
         # === 1. RFM + KMeans Customer Segmentation ===
