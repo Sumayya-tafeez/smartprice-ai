@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechMart – Live Dynamic Pricing Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TechMart</h1>
+    <p>Watch prices change intelligently in real-time</p>
+  </header>
+
+  <div class="controls">
+    <button onclick="loadPrices('normal')" class="btn>Normal Day</button>
+    <button onclick="loadPrices('blackfriday')" class="btn active" id="bf-btn">Black Friday Surge</button>
+    <button onclick="loadPrices('low_demand')" class="btn">Low Demand Day</button>
+    <div class="uplift" id="uplift">Average uplift: <strong>18.7%</strong></div>
+  </div>
+
+  <div class="products" id="products"></div>
+
+  <footer>
+    Powered by XGBoost + Dynamic Pricing Engine<br>
+    Project by Nisha Fatima & Sumayya Begum
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
