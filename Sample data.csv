@@ -1,0 +1,18 @@
+Date,Product ID,Product Name,Store ID,Units Sold,Price,Category
+01-01-2025,P001,Wireless Earbuds,S01,145,49.99,Electronics
+01-01-2025,P002,Laptop Stand,S01,92,29.99,Accessories
+01-01-2025,P003,USB-C Hub,S02,78,39.99,Electronics
+01-01-2025,P004,Phone Case,S01,210,19.99,Accessories
+01-01-2025,P005,Mechanical Keyboard,S03,67,129.99,Electronics
+01-01-2025,P006,Webcam 4K,S02,54,89.99,Electronics
+01-01-2025,P007,Mouse Pad XXL,S01,180,24.99,Accessories
+01-01-2025,P008,Bluetooth Speaker,S03,112,79.99,Audio
+01-01-2025,P009,Smart Watch,S02,98,199.99,Wearables
+01-01-2025,P010,Charging Cable,S01,320,14.99,Accessories
+02-01-2025,P001,Wireless Earbuds,S01,132,49.99,Electronics
+02-01-2025,P002,Laptop Stand,S02,88,29.99,Accessories
+02-01-2025,P011,"Monitor 27""",S03,45,299.99,Electronics
+02-01-2025,P012,Gaming Mouse,S01,76,69.99,Gaming
+02-01-2025,P013,SSD 1TB,S03,63,119.99,Storage
+03-01-2025,P014,Noise-Cancelling Headphones,S01,89,149.99,Audio
+03-01-2025,P015,Wireless Charger,S02,201,34.99,Accessories
